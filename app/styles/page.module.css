@@ -1,0 +1,15 @@
+.body {
+   min-height: 100vh;
+   max-height: fit-content;
+   display: flex;
+   justify-content: center;
+   border: purple 1px solid;
+   padding: 24px;
+}
+
+.coolLookingBox {
+   display: flex;
+   align-self: center;
+   height: 200px;
+   text-align: center;
+}

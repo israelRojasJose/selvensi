@@ -2,27 +2,55 @@
 import styles from "@/styles/page.module.css";
 import { useEffect, useState } from "react";
 
-function TimeComponent({ timeString }: { timeString: string }) {
-   console.log(timeString);
-   return <div>{timeString}</div>;
+type customTimeFormat = {
+   hours: number;
+   minutes: number;
+   seconds: number;
+   meridiem: string;
+};
+
+function TimeComponent(timeSet: customTimeFormat) {
+   const hours_format = timeSet.hours % 12 || 12;
+   return (
+      <div>
+         {hours_format}:{timeSet.minutes}:{timeSet.seconds}
+         {timeSet.meridiem}
+      </div>
+   );
 }
 
 export default function Home() {
-   const [time, setTime] = useState("");
-   let synchronousTimeVariable = new Date();
-   console.log(synchronousTimeVariable);
-   // if (synchronousTimeVariable !== time) {
-   //    setTime(synchronousTimeVariable);
-   // }
+   const [time, setTime] = useState(new Date());
+   useEffect(() => {
+      const intervalId = setInterval(() => {
+         setTime(new Date());
+      }, 1000);
 
+      return () => {
+         clearInterval(intervalId);
+      };
+   }, []);
+   const hours = time.getHours();
+   const minutes = time.getMinutes();
+   const seconds = time.getSeconds();
+   const meridiem = hours >= 12 ? "PM" : "AM";
+
+   const timeSet: customTimeFormat = {
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds,
+      meridiem: meridiem,
+   };
    return (
       <div className={styles.coolLookingBox}>
          <TimeComponent
-            timeString={synchronousTimeVariable.toLocaleTimeString()}
+            hours={hours}
+            minutes={minutes}
+            seconds={seconds}
+            meridiem={meridiem}
          />
       </div>
    );
 }
-### current the program looks to have two sets of data times the server time in utc and the client in local time. 
-I choose the client time in case your acress the site form acrosss the world. 
-hey brother, I belive in you. I believe in everything you can and will do. I love you. go hard.  
+
+// hey brother, I believe in you. I believe in everything you can and will do. I love you. go hard.

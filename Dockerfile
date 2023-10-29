@@ -1,8 +1,10 @@
 FROM node:latest
 
 EXPOSE 3000
-WORKDIR /personalPortfoilo
+WORKDIR /portfoilo
 COPY . .
 RUN npm install
 ENV NFL_TEAM='Giants'
 CMD [ "npm","run","dev"]
+#docker build -t portfolio_image -f ./Dockerfile .
+#docker run -p 3000:3000 --name portfolio -v "$(pwd):/portfolio" portfolio_image

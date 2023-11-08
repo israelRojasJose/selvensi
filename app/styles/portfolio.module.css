@@ -1,0 +1,45 @@
+.body {
+   min-height: 100vh;
+   max-height: fit-content;
+   justify-content: center;
+   display: block;
+   padding: 0px 0px 0px 0px;
+   margin: 0px;
+   background-color: #bcb9b9;
+}
+
+.fatherTimeBody {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+   width: 300px;
+   border: red 2px solid;
+}
+
+.nav {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   height: 80px;
+   width: 100%;
+   background-color: #170d0c;
+}
+
+.text_box {
+   font-family: "Crimson Text";
+   font-size: 29px;
+   font-style: normal;
+   font-variant: normal;
+   font-weight: 700;
+   line-height: 23px;
+   color: #e8e7e7;
+   font-family: "Sofia", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+}

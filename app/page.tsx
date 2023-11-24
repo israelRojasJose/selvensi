@@ -1,30 +1,22 @@
-import styles from "@/styles/portfolio.module.css";
-import { Hours, Minutes, Seconds } from "./clientComponents";
+import styles from "styles/page.module.css";
+import { GettingTime } from "./components/clientComponents";
 
-type customTimeFormat = {
-   hours: number;
-   minutes: number;
-   seconds: number;
-   meridiem: string;
-};
-function ClockFaceCard({ children }: { children: React.ReactNode }) {
+
+
+
+function ClockBody({ children }: { children: React.ReactNode }) {
    return <div className={styles.clock}>{children}</div>;
 }
 
 export default function Home() {
    return (
-      <div className={styles.fatherTime}>
-         <ClockFaceCard>
-            <Hours />
-         </ClockFaceCard>
-         <span>:</span>
-         <ClockFaceCard>
-            <Minutes />
-         </ClockFaceCard>
-         <ClockFaceCard>
-            <Seconds />
-         </ClockFaceCard>
-      </div>
+     <>
+       <ClockBody>
+   
+           <GettingTime />
+         
+       </ClockBody>
+     </>
    );
 }
 

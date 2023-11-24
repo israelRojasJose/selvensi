@@ -1,0 +1,44 @@
+.body {
+   min-height: 100vh;
+   max-height: fit-content;
+   justify-content: center;
+   display: block;
+   padding: 0px 0px 0px 0px;
+   margin: 0px;
+   background-color: #bcb9b9;
+}
+.CardsWrapperfirstColorbg { 
+	background: #fafafa; 
+}
+	
+.CardsWrapperSecondColorbg { 
+	background: #ffe9e3; 
+}
+
+.CardsWrapperThirdColorbg{ 
+	background: #c4c1e0; 
+}
+
+.CardsWrapperfourthColorbg { 
+	background: #7c73e6; 
+}
+
+
+.CardsWrapper{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+   width: 300px;
+   border: red 2px solid;
+}
+
+.clock{
+      height: 400px;
+   width: 600px;
+   background: #f0f0f0;
+}
+.timeCard{
+   box-shadow: 3px 4px black 12px;
+}

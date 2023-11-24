@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import styles from "@/styles/portfolio.module.css";
-import Nav from "./nav";
-import ScrollOptions from "./components/ScrollLink";
-import Name from "./components/name";
+import styles from "styles/page.module.css";
 
 export const metadata: Metadata = {
    title: "personalPortfolio",
@@ -17,10 +14,6 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body className={styles.body}>
-            <Nav>
-               <Name />
-               <ScrollOptions />
-            </Nav>
             {children}
          </body>
       </html>

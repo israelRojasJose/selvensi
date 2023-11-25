@@ -22,9 +22,7 @@ import { useEffect, useState } from "react";
    }, [time]);
 
    return (
-     <div className={styles.CardsWrapper}>
-       <span className={styles.timeCard}>{time}</span>
-     </div>
+    <span className={styles.time}>{time}</span>
    );
 }
       

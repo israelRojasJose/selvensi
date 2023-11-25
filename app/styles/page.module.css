@@ -1,44 +1,50 @@
 .body {
-   min-height: 100vh;
+   min-height: fit-content;
+   height :1200rem;
+   width: 100vw;
+   padding:0;  
+   margin: 0;
    max-height: fit-content;
+   display: inline-block ; 
    justify-content: center;
-   display: block;
-   padding: 0px 0px 0px 0px;
-   margin: 0px;
-   background-color: #bcb9b9;
+  background: #141010; 
 }
-.CardsWrapperfirstColorbg { 
-	background: #fafafa; 
+.clock{  
+   position: sticky;
+   opacity: .72;
+   display: inline-flex;
+background: radial-gradient(circle, rgba(0,0,0,1) 78%, rgba(104,7,71,1) 100%);    top: 0px;   
+   height: 100vh;
+   /* make the width dynamic with the age of the user to fill the page with color. */
+   width: calc(33% );
+   align-self: flex-start;
+   justify-self: center;
 }
-	
-.CardsWrapperSecondColorbg { 
-	background: #ffe9e3; 
+.time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    color: #f70776;
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px
 }
 
-.CardsWrapperThirdColorbg{ 
-	background: #c4c1e0; 
-}
-
-.CardsWrapperfourthColorbg { 
-	background: #7c73e6; 
-}
-
-
-.CardsWrapper{
-   display: flex;
-   flex-direction: row;
+.bar1{
+   display: inline-block;
    justify-content: center;
-   align-items: center;
-   height: 200px;
+   height: 100vh;
+   width: 20px;
+   border-right:  27px  green ;  
+   box-shadow: 10px 5px 5px rgb(255, 255, 255);}
+
+.container_of_ticks{   
+   margin-block: 10px;
+   color: wheat        ;
+   position: absolute ;
+   top: .3 ;
    width: 300px;
-   border: red 2px solid;
-}
-
-.clock{
-      height: 400px;
-   width: 600px;
-   background: #f0f0f0;
-}
-.timeCard{
-   box-shadow: 3px 4px black 12px;
+   border-top: solid 17px  #f70776; 
+   border-radius: 320px 320px 320px 320px ;
 }

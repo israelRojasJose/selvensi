@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
  export function GettingTime() {
    const [time, setTime] = useState("");
-   
+  //  I want the bars to be the clock hands around a laying down cyclinder. 
    useEffect(() => {
      const date = new Date();
      const dateTime = setTimeout(() => {

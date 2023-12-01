@@ -11,40 +11,33 @@
 }
 .clock{  
    position: sticky;
-   opacity: .72;
-   display: inline-flex;
-background: radial-gradient(circle, rgba(0,0,0,1) 78%, rgba(104,7,71,1) 100%);    top: 0px;   
+   opacity: .82;
+background: radial-gradient(circle, rgba(0,0,0,1) 58%,
+ rgba(104,7,71,1) 10%);    top: 0px;   
    height: 100vh;
    /* make the width dynamic with the age of the user to fill the page with color. */
    width: calc(33% );
-   align-self: flex-start;
-   justify-self: center;
+   display: inline-flex; align-items: center; justify-content: center;
 }
 .time {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-    color: #f70776;
-    font-size: 60px;
-    font-family: Orbitron;
-    letter-spacing: 7px
+   position: relative;
+   top: 50%;   
+   left: 50%;  
+   /* transform: translateX(-50%) translateY(-50%); */
+   color: #f70776;
+   font-size: 60px;
+   font-family: Orbitron;
+   letter-spacing: 7px;
+   box-shadow: 5px rgb(179, 178, 178);
+
 }
 
-.bar1{
+.rule_thirds{
    display: inline-block;
    justify-content: center;
-   height: 100vh;
-   width: 20px;
-   border-right:  27px  green ;  
-   box-shadow: 10px 5px 5px rgb(255, 255, 255);}
+   height: 100vh; 
+   width: 33%;
+   border: solid red 2px ;
 
-.container_of_ticks{   
-   margin-block: 10px;
-   color: wheat        ;
-   position: absolute ;
-   top: .3 ;
-   width: 300px;
-   border-top: solid 17px  #f70776; 
-   border-radius: 320px 320px 320px 320px ;
-}
+}  
+

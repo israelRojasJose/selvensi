@@ -10,7 +10,7 @@ services:
     mem_reservation: 128M 
     container_name: selvensi
     volumes:
-      - ./src/*:/site/src
+      - ./src/:/site/src
       - ./package-lock.json:/site/package-lock.json
       - ./package.json:/site/package.json
     ports:

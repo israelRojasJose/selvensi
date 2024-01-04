@@ -1,5 +1,4 @@
-FROM node:latest
-EXPOSE 3000
+FROM node:latest EXPOSE 3000
 WORKDIR /site
 COPY . .
 RUN npm install

@@ -9,14 +9,14 @@ services:
     mem_limit: .5g
     mem_reservation: 128M 
     container_name: selvensi
-    volumes:
-      - ./src/:/site/src
-      - ./package-lock.json:/site/package-lock.json
-      - ./package.json:/site/package.json
+      #    volumes:
+      # - ./src/:/site/src
+      #- ./package-lock.json:/site/package-lock.json
+      #- ./package.json:/site/package.json
     ports:
       - "3000:3000"
-    environment:
-      POSTGRES_DATABASE_URL: postgres://admin:enteradmin_selvensisecret!@#@postgres_testing:5432/primary
+    #environment:
+        #POSTGRES_DATABASE_URL: postgres://admin:enteradmin_selvensisecret!@#@postgres_testing:5432/primary
 
   # postgres:
   #   image: postgres:latest
